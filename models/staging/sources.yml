@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: raw
+    database: UK_LAND_REGISTRY
+    schema: RAW
+    tables:
+      - name: price_paid

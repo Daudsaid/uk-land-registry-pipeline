@@ -1,5 +1,34 @@
+# dbt
 target/
 dbt_packages/
 logs/
+
+# DuckDB
 *.duckdb
+
+# CSV data files
 *.csv
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.Python
+*.egg-info/
+dist/
+build/
+
+# macOS
+.DS_Store
+
+# Screenshots
+screen-shorts/
+
+# IDE
+.vscode/
+.idea/
