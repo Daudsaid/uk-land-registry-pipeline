@@ -1,0 +1,29 @@
+version: 2
+
+models:
+  - name: stg_price_paid
+    description: "Cleaned and typed UK Land Registry price paid data 2016-2026"
+    columns:
+      - name: transaction_id
+        description: "Unique transaction identifier"
+        tests:
+          - not_null
+          - unique
+      - name: price_paid
+        description: "Sale price in GBP"
+        tests:
+          - not_null
+      - name: transfer_date
+        tests:
+          - not_null
+      - name: property_type
+        tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['Detached', 'Semi-Detached', 'Terraced', 'Flat', 'Other']
+      - name: duration
+        tests:
+          - accepted_values:
+              arguments:
+                values: ['Freehold', 'Leasehold']
